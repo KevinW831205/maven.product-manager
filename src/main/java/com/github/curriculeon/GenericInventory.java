@@ -33,7 +33,7 @@ public class GenericInventory<SomeType> implements InventoryInterface<SomeType> 
 
     @Override
     public SomeType[] toArray(SomeType[] objectsToBeAdded) {
-        return Arrays.copyOf(objectsToBeAdded, objectsToBeAdded.length);
+        return null;
     }
 
 

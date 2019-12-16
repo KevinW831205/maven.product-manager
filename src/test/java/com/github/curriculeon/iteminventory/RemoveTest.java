@@ -23,8 +23,8 @@ public class RemoveTest {
         genericInventory.remove(indexOfElement);
         actualItems = genericInventory.toArray(actualItems);
 
-        System.out.println("Actual Item " + actualItems);
-        System.out.println("Expected Item "+ expectedItems);
+
+        System.out.println("Actual "+objectsToBeAdded);
 
         // then
         Assert.assertArrayEquals(expectedItems, actualItems);

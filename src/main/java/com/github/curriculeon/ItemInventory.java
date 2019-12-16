@@ -31,8 +31,10 @@ public class ItemInventory implements InventoryInterface<Item> {
     }
 
     @Override
-    public Item[] toArray(Item[] objectsToBeAdded) {
-        return Arrays.copyOf(objectsToBeAdded, objectsToBeAdded.length);
-    }
+    public Item[] toArray(Item[] array) {
+        Item[] arrayToBePopulated = new Item[0];
+        arrayToBePopulated =  inventoryList.toArray(arrayToBePopulated);
+        return arrayToBePopulated;
 
+    }
 }
