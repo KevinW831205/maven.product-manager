@@ -1,31 +1,38 @@
 package com.github.curriculeon;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 /**
  * Created by leon on 12/16/2019.
  */
 public class ItemInventory implements InventoryInterface<Item> {
+
+    ArrayList<Item> inventoryList = new ArrayList<Item>();
+
     @Override
     public void add(Item someObject) {
-
+        inventoryList.add(someObject);
     }
 
     @Override
     public Boolean contains(Item someObject) {
-        return null;
+        return inventoryList.contains(someObject);
     }
 
     @Override
     public Item get(int indexOfElement) {
-        return null;
+        return inventoryList.get(indexOfElement);
     }
 
     @Override
     public Item remove(int indexOfElement) {
-        return null;
+        return inventoryList.remove(indexOfElement);
     }
 
     @Override
     public Item[] toArray(Item[] objectsToBeAdded) {
-        return new Item[0];
+        return Arrays.copyOf(objectsToBeAdded, objectsToBeAdded.length);
     }
+
 }
