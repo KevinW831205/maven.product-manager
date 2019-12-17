@@ -2,6 +2,9 @@ package com.github.curriculeon;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
 /**
  * Created by leon on 12/16/2019.
@@ -37,5 +40,20 @@ public class ItemInventory implements InventoryInterface<Item> {
         arrayToBePopulated =  inventoryList.toArray(arrayToBePopulated);
         return arrayToBePopulated;
 
+    }
+
+    @Override
+    public Iterator<Item> iterator() {
+        return null;
+    }
+
+    @Override
+    public void forEach(Consumer<? super Item> action) {
+
+    }
+
+    @Override
+    public Spliterator<Item> spliterator() {
+        return null;
     }
 }
