@@ -16,21 +16,6 @@ public class GenericInventory<SomeType> implements InventoryInterface<SomeType> 
     }
 
     @Override
-    public Iterator<SomeType> iterator() {
-        return null;
-    }
-
-    @Override
-    public void forEach(Consumer<? super SomeType> action) {
-
-    }
-
-    @Override
-    public Spliterator<SomeType> spliterator() {
-        return null;
-    }
-
-    @Override
     public void add(SomeType someObject) {
         genericInventory.add(someObject);
     }
@@ -48,10 +33,7 @@ public class GenericInventory<SomeType> implements InventoryInterface<SomeType> 
 
     @Override
     public SomeType remove(int indexOfElement) {
-        System.out.println("removing item "+indexOfElement);
-        System.out.println(genericInventory.remove(indexOfElement));
-        System.out.println("actual length = "+genericInventory.size());
-        return genericInventory.get(0);
+        return genericInventory.remove(indexOfElement);
     }
 
     @Override
@@ -59,5 +41,19 @@ public class GenericInventory<SomeType> implements InventoryInterface<SomeType> 
         return genericInventory.toArray(objectsToBeAdded);
     }
 
+    @Override
+    public Iterator<SomeType> iterator() {
+        return null;
+    }
+
+    @Override
+    public void forEach(Consumer<? super SomeType> action) {
+
+    }
+
+    @Override
+    public Spliterator<SomeType> spliterator() {
+        return null;
+    }
 
 }

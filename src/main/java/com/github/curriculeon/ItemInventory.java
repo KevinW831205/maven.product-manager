@@ -11,7 +11,7 @@ import java.util.function.Consumer;
  */
 public class ItemInventory implements InventoryInterface<Item> {
 
-    ArrayList<Item> inventoryList = new ArrayList<Item>();
+    GenericInventory<Item> inventoryList = new GenericInventory<>();
 
     @Override
     public void add(Item someObject) {
