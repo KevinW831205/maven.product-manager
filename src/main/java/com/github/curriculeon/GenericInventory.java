@@ -9,6 +9,9 @@ import java.util.Arrays;
 public class GenericInventory<SomeType> implements InventoryInterface<SomeType> {
     ArrayList<SomeType> genericInventory = new ArrayList<SomeType>();
 
+    public GenericInventory() {
+    }
+
     @Override
     public void add(SomeType someObject) {
         genericInventory.add(someObject);
@@ -22,18 +25,20 @@ public class GenericInventory<SomeType> implements InventoryInterface<SomeType> 
 
     @Override
     public SomeType get(int indexOfElement) {
-
         return genericInventory.get(indexOfElement);
     }
 
     @Override
     public SomeType remove(int indexOfElement) {
-        return genericInventory.remove(indexOfElement);
+        System.out.println("removing item "+indexOfElement);
+        System.out.println(genericInventory.remove(indexOfElement));
+        System.out.println("actual length = "+genericInventory.size());
+        return genericInventory.get(0);
     }
 
     @Override
     public SomeType[] toArray(SomeType[] objectsToBeAdded) {
-        return null;
+        return genericInventory.toArray(objectsToBeAdded);
     }
 
 

@@ -20,8 +20,12 @@ public class RemoveTest {
 
         // when
         genericInventory.remove(indexOfElement);
+        System.out.println("inside test index 0 "+genericInventory.get(2));
         actualItems = genericInventory.toArray(actualItems);
 
+        for(SomeType s : actualItems) {
+            System.out.println("actual items " + s);
+        }
 
         // then
         Assert.assertArrayEquals(expectedItems, actualItems);

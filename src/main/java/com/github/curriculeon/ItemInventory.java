@@ -27,6 +27,7 @@ public class ItemInventory implements InventoryInterface<Item> {
 
     @Override
     public Item remove(int indexOfElement) {
+        System.out.println("removed item " + indexOfElement);
         return inventoryList.remove(indexOfElement);
     }
 
